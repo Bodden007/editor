@@ -4,9 +4,5 @@
 class View
 {
 public:
-    void viewCreat();
-    void viewImport();
-    void viewExsport();
-    void viewCreatGraph();
-    void viewDeleteGraph();
+    void userView(std::string message);
 };

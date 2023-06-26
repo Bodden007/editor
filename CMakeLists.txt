@@ -5,11 +5,18 @@ set(PROJECT_VERSION 0.0.${PATCH_VERSION})
 
 project (editor VERSION ${PROJECT_VERSION})
 
-add_executable(editor src/main.cpp src/controller.cpp
-src/model.cpp src/view.cpp)
+add_executable(editor src/main.cpp 
+src/controller.cpp
+src/view.cpp
+src/models/createDoc.cpp
+src/models/importDoc.cpp
+src/models/expDoc.cpp
+src/models/createGraph.cpp
+src/models/deleteGraph.cpp
+)
 target_include_directories(editor
     PRIVATE
-    includes/
+    includes/	
 )
 
 set_target_properties(

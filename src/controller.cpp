@@ -3,27 +3,35 @@
 void Controller::start()
 {
     std::cout << "Controller start" << std::endl;
-    Model model;
+    createDoc crDoc;
+    importDoc impDoc;
+    expDoc exDoc;
+    createGraph crGraph;
+    deleteGraph deGraph;
     View view;
-
-    if (model.getCrd())
+    crDoc.createDocument();
+    if (crDoc.getCrd())
     {
-        view.viewCreat();
+        view.userView("Creating document");
     };
-    if (model.getImprd())
+    impDoc.importDocument();
+    if (impDoc.getImprd())
     {
-        view.viewImport();
+        view.userView("Importing document");
     };
-    if (model.getExpd())
+    exDoc.exportDocument();
+    if (exDoc.getExpd())
     {
-        view.viewExsport();
+        view.userView("Exporting document");
     };
-    if (model.getCrgr())
+    crGraph.createGraphPrim();
+    if (crGraph.getCrgr())
     {
-        view.viewCreatGraph();
+        view.userView("Creating primitive graph");
     };
-    if (model.getDelgr())
+    deGraph.deleteGraphPrim();
+    if (deGraph.getDelgr())
     {
-        view.viewDeleteGraph();
+        view.userView("Deleting primitive graph");
     };
 }
