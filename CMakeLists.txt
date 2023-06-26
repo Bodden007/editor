@@ -5,8 +5,8 @@ set(PROJECT_VERSION 0.0.${PATCH_VERSION})
 
 project (editor VERSION ${PROJECT_VERSION})
 
-add_executable(editor srs/main.cpp srs/controller.cpp
-srs/model.cpp srs/view.cpp)
+add_executable(editor src/main.cpp src/controller.cpp
+src/model.cpp src/view.cpp)
 target_include_directories(editor
     PRIVATE
     includes/
