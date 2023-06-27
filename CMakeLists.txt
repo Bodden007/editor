@@ -13,6 +13,8 @@ src/models/importDoc.cpp
 src/models/expDoc.cpp
 src/models/createGraph.cpp
 src/models/deleteGraph.cpp
+src/primitives/circle.cpp
+src/primitives/rect.cpp
 )
 target_include_directories(editor
     PRIVATE

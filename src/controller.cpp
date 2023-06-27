@@ -34,4 +34,6 @@ void Controller::start()
     {
         view.userView("Deleting primitive graph");
     };
+
+    view.managePrimitive();
 }
